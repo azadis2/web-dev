@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.sidebar {
+    grid-column: 1/2;
+}
+.header {
+    grid-column: 2/3;
+}
+.container {
+    grid-column:2/3;
+}
