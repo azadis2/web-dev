@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/prompt/v10/-W__XJnvUD7dzB2KYNodREEjew.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+body {
+    background-color: #3E368E;
+    
+
+}
+.big-container {
+    display: flex;
+    width: 990px;
+    height: max-content;
+    margin-left: 120px;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #040308;
+    border-radius: 15px;
+    background-color: #040308;
+    padding: 10px;
+
+}
+
+img{
+    border-radius: 15px;
+    height: 640px;
+    width: 720px;
+}
+.small-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 640px;
+    align-items: center;
+
+}
+
+.text {
+    font-family: 'Prompt', 'Times New Roman', Times, serif;
+    background-color: lightblue;
+    border: 0;
+    box-shadow: 1px 0px 5px 5px #29406C;
+    width: 220px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #3E368E;
+    border-radius: 10px;
+}
+
+.form {
+    width: 220px;
+    padding: 10px;
+    height: 400px;
+    color: #D947CE;
+    font-family: 'Prompt', 'Times New Roman', Times, serif;
+}
+
+label {
+    margin: 18px;
+
+}
+
+input {
+    margin: 18px;
+    padding: 5px;
+    border: 0;
+    box-shadow: 1px 0px 5px 5px lightblue;
+    border-radius: 5px;
+}
+button {
+    margin-top: 30px;
+    margin-left: 70px;
+    font-family: 'Prompt', 'Times New Roman', Times, serif;
+    background-color: #D947CE;
+    color: black;
+    border: 0px;
+    border-radius: 5px;
+    font-size: smaller;
+    box-shadow: 1px 0px 5px 5px #D947CE;
+}
+
+footer {
+    color:black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 0;
+
+}
+a:visited {
+    color: black;
+}
+.git{
+    height: 32px;
+    width: 32px;
+}
