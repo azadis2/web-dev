@@ -1,0 +1,74 @@
+* {
+    overflow: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e0d5;
+    color: #222c3c;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    height: 10vh;
+    width:100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b69b7d;
+    border-bottom: 2px solid #8e775d;
+}
+h1 {
+    margin-left: 50px;
+    color: #222c3c;
+}
+.log-in {
+    margin-right: 50px;
+    color: #222c3c;
+}
+p {
+    font-size: 30px;
+    color: #222c3c;
+}
+h4 {
+    margin: 0px 0px 5px 0px;
+}
+.container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer{
+    width: 100%;
+    padding: 0 0 0 0;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    display: flex;
+
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    color: black;
+    font-weight: lighter;
+}
+.git{
+    height: 25px;
+    width: 25px;
+}
+.form-container {
+    background-color: #d8b26e;
+    color: #222c3c;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    border-radius: 10%;
+    border: 2px solid #8e775d;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
