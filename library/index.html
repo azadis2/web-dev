@@ -6,36 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" />
 </head>
 <body>
     <header class="header">
         <h1>library</h1>
-        <div class="log-in">log in</div>
     </header>
     <div class="container">
         <p id="add">+ Add Book</p>
         <div class="form-container">
-            <form >
-                <form id="form">
+                <form id="theForm" onsubmit="return false">
                     <h4>Add a new Book</h4>
-                    <input type="text" placeholder="Title" required>
-                    <input type="text" placeholder="Author" required>
-                    <input type="text" placeholder="Pages" required>
+                    <input type="text" placeholder="Title" id="title" required>
+                    <input type="text" placeholder="Author" id="author" required>
+                    <input type="text" placeholder="Pages" id="pages" required>
                     <br>
                     <label for="read">Have you read it?</label>
                     <input type="checkbox" id="read" required>
                     <br>
                     <button class="submit">Submit</button>
-                  </form>
-            </form>
+                </form>
         </div>
-        
-        <footer>Copyright &copy
-            <a href="https://github.com/azadis2/web-dev/tree/main/library" target="_blank">
-                <i class="fab fa-github"></i
-            ><img class="git" src="https://www.iconsdb.com/icons/preview/black/github-10-xxl.png" alt="Github logo"></a>
-        </footer>
+        <div class="small-container">
+
+        </div>
     </div>
+    <footer>Copyright &copy
+        <a href="https://github.com/azadis2/web-dev/tree/main/library" target="_blank">
+            <i class="fab fa-github"></i
+        ><img class="git" src="https://www.iconsdb.com/icons/preview/black/github-10-xxl.png" alt="Github logo"></a>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

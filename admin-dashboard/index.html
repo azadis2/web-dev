@@ -4,27 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2620/2620936.png" />
 </head>
 <body>
     <div class="header">
-        <div>search bar</div>
+        <div class="top-row">
+            <div class="search-bar">
+                <img src="icons/magnify.png" style="height: 24px; width: 24px;">
+                <input type="text" style="border-radius: 5px; width: 600px;">
+            </div>
+            <div class="left-nav" style="width: fit-content;">
+                <img src="icons/bell-ring-outline.png">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png" style="width: 48px; height:48px;">
+                <p id="your-name">John Doe</p>
+            </div>
+            
+
+        </div>
+        <div class="bottom-row">
+            <div class="welcome-container">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png" style="width: 96px; height:96px;">
+                <div class="welcome-text">
+                    <p>Hi, there!</p>
+                    <h3 id="second-name">John Doe (@jdoe)</h3>
+                </div>
+
+            </div>
+            <div class="nav-bar" >
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+        </div>
     </div>
-    <div class="sidebar">
-        <div>Dashboard</div>
-        <div>Home</div>
-        <div>Profile</div>
-        <div>Messages</div>
-        <div>History</div>
-        <div>Tasks</div>
-        <div>Communities</div>
-        <div>Settings</div>
-        <div>Support</div>
-        <div>Privacy</div>
+    <div class="sidebar"> 
+        <div class="dash">
+            <img src="./icons/monitor-dashboard.png">
+            <h3>Dashboard</h3>
+        </div>
+        <div class="middle-links">
+            <div class="home">
+                <img src="icons/home.png">
+                <p>Home</p>
+            </div>
+            <div class="profile">
+                <img src="icons/face-woman-profile.png">
+                <p>Profile</p>
+            </div>
+            <div class="messages">
+                <img src="icons/message-settings.png">
+                <p>Messages</p>
+            </div>
+            <div class="history">
+                <img src="icons/history.png">
+                <p>History</p>
+            </div>
+            <div class="tasks">
+                <img src="icons/calendar-check-outline.png">
+                <p>Tasks</p>
+            </div>
+            <div class="communities">
+                <img src="icons/account-group.png">
+                <p>Communities</p>
+            </div>
+        </div>
+        <div class="bottom-links">
+
+            <div class="settings">
+                <img src="icons/cog-outline.png">
+                <p>Settings</p>
+            </div>
+            <div class="support">
+                <img src="icons/face-agent.png">
+                <p>Support</p>
+            </div>
+            <div class="privacy">
+                <img src="icons/shield-check.png">
+                <p>Privacy</p>
+            </div>
+        </div>
+
+
+        <div class="footer" style="text-align: center; font-weight: 100;">
+            <footer>Copyright &copy
+                <a href="https://github.com/azadis2/web-dev/" target="_blank">
+                    <i class="fab fa-github"></i
+                ><img class="git" src="https://www.iconsdb.com/icons/preview/black/github-10-xxl.png" alt="Github logo"></a>
+            </footer>
+        </div>
+       
     </div>
     <div class="container">
-        <div class="small-container">Cool project</div>
+        <div class="small-container"> 
+            <h2 class="h2-project">Your Projects</h2>
+            <div class="projects">Etch A Sketch
+                <img src="icons/etch.png" class="etch">
+            </div>
+            <div class="projects">Landing Page
+                <img src="icons/landing.png" class="landing">
+            </div>
+            <div class="projects">Rock Paper Scissors
+                <img src="icons/rps.png" class="rps">
+            </div>
+            <div class="projects">Sign-up form
+                <img src="icons/form.png" class="form">
+            </div>
+            <div class="projects">Library
+                <img src="icons/library.png" class="library">
+            </div>
+            <div class="projects">Admin Dash
+                <img src="icons/admin.png" class="admin">
+            </div>
+            
+        </div>
+        <div class="right-container">
+            <h2>Announcements</h2>
+            <div class="maintenance">
+                <p style="font-weight: 600;">Site Maintenance</p>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, eos animi rerum accusantium ipsam asperiores quae libero tempora fugit id, laboriosam at unde reprehenderit labore culpa tempore doloremque! Magnam, sapiente.</p>
+            </div>
+            <div class="maintenance">
+                <p style="font-weight: 600;">Community Day</p>
+                <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, eos animi rerum accusantium ipsam asperiores quae libero tempora fugit id, laboriosam at unde reprehenderit labore culpa tempore doloremque! Magnam, sapiente.</p>
+            </div>
+            <div class="stats" style="opacity: 0.65;">
+                <p style="font-weight: 600; opacity: 1;">Stats</p>
+            </div>
+        </div>
     </div>
+    
 </body>
+
+    <script>
+        const name = window.prompt("What is your full name?");
+        const displayName = document.getElementById('your-name');
+        const nameAgain = document.getElementById('second-name');
+        displayName.innerText = name;
+        nameAgain.innerText = name;
+    </script>
+
 </html>

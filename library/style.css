@@ -1,36 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
-    overflow: hidden;
+    font-family: 'Lobster', cursive;
+
 }
-body {
+html,body {
     display: flex;
     flex-direction: column;
-    background-color: #e2e0d5;
-    color: #222c3c;
+    background-color: #D11149;
     align-items: center;
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 header {
     display: flex;
-    height: 10vh;
+    height: 15vh;
     width:100%;
     align-items: center;
     justify-content: space-between;
-    background-color: #b69b7d;
-    border-bottom: 2px solid #8e775d;
+    background-color: #1A8FE3;
+    border-bottom: 2px solid #0d5183;
+    position:sticky;
 }
 h1 {
     margin-left: 50px;
-    color: #222c3c;
+    font-size: 50px;
+    color: #e3da2f;
 }
 .log-in {
     margin-right: 50px;
-    color: #222c3c;
+    color: #e3da2f;
 }
-p {
+
+#add {
     font-size: 30px;
-    color: #222c3c;
+    color: #e3da2f;
 }
 h4 {
     margin: 0px 0px 5px 0px;
@@ -39,7 +46,14 @@ h4 {
     height: 90vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
+}
+button {
+    background-color: #F17105;
+    border-radius: 10px;
+    border: 1px solid #F17105;
+
+    width: 150px;
 }
 footer{
     width: 100%;
@@ -48,11 +62,10 @@ footer{
     left: 0;
     height: 10vh;
     display: flex;
-
     justify-content: center;
     gap: 20px;
     align-items: center;
-    color: black;
+    color: E6C229;
     font-weight: lighter;
 }
 .git{
@@ -60,15 +73,20 @@ footer{
     width: 25px;
 }
 .form-container {
-    background-color: #d8b26e;
-    color: #222c3c;
+    background-color: #6610F2;
+    color: #e3da2f;
     align-items: center;
     text-align: center;
     padding: 10px 0px 0px 0px;
     border-radius: 10%;
-    border: 2px solid #8e775d;
+    border: 2px solid #370980;
     width: 200px;
     height: 150px;
     display: flex;
     flex-direction: column;
+}
+
+.small-container {
+    display: flex;
+    width: 100vh;
 }
