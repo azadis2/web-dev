@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.png" />
 </head>
-<body>
+<body class="initialized">
     <header class="header">
-        <h1>library</h1>
+        <div class="header-container">
+            <h1>library</h1>
+        </div>
     </header>
-    <div class="container">
-        <p id="add">+ Add Book</p>
-        <div class="form-container">
+    <main class="container">
+        <p id="addBookBtn">+ Add Book</p>
+        <div class="book-grid" id="booksGrid"></div>
+        <div class="form-container" style="display: none;">
                 <form id="theForm" onsubmit="return false">
                     <h4>Add a new Book</h4>
                     <input type="text" placeholder="Title" id="title" required>
@@ -27,16 +30,12 @@
                     <button class="submit">Submit</button>
                 </form>
         </div>
-        <div class="small-container">
-
-        </div>
-    </div>
+    </main>
     <footer>Copyright &copy
         <a href="https://github.com/azadis2/web-dev/tree/main/library" target="_blank">
             <i class="fab fa-github"></i
         ><img class="git" src="https://www.iconsdb.com/icons/preview/black/github-10-xxl.png" alt="Github logo"></a>
     </footer>
-    
     <script src="script.js"></script>
 </body>
 </html>

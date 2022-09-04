@@ -1,3 +1,7 @@
+// library array
+let myLibrary = [];
+// books grid
+const booksGrid = document.getElementById('booksGrid');
 // book function constructor
 function Book(title, author, pages, read) {
     this.title = title;
@@ -5,7 +9,61 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
 }
-let myLibrary = [];
+// function to add books to library
+function addBooktoLibrary(newBook){
+    if (myLibrary.length === 0) {
+        myLibrary.push(newBook)
+    }
+    else {
+        myLibrary.forEach( book => {
+            if (newBook.title !== book.title) {
+                myLibrary.push(newBook);
+            } else {
+                console.log('Book is already available in the library')
+            }
+        })
+    }
+    
+
+}
+// creating book card for every book that is added to the library
+const createBookCard = (book) => {
+    const bookCard = document.createElement('div');
+    const title = document.createElement('p');
+    const author = document.createElement('p');
+    const pages = document.createElement('p');
+    const btnGroup = document.createElement('div');
+    const readBtn = document.createElement('button');
+    const removeBtn = document.createElement('button');
+
+    bookCard.classList.add('book-card');
+    btnGroup.classList.add('button-group');
+    readBtn.classList.add('btn');
+    readBtn.id = 'read';
+    removeBtn.classList.add('btn');
+    /*
+    readBtn.onclick = toggleRead; // TODO function
+    removeBtn.onclick = removeBook; // TODO function
+    */
+   title.textContent = book.title;
+   author.textContent = book.author;
+   pages.textContent = `${book.pages} pages`;
+   readBtn.textContent = 'Read';
+   removeBtn.textContent = 'Remove';
+
+   bookCard.appendChild(title);
+   bookCard.appendChild(author);
+   bookCard.appendChild(pages);
+   btnGroup.appendChild(readBtn);
+   btnGroup.appendChild(removeBtn);
+   bookCard.appendChild(btnGroup);
+   booksGrid.appendChild(bookCard);
+}
+let harry = new Book('harry potter', 'jk', 364, true);
+let lotr = new Book('LOTR', 'Tolkien', 500, false);
+createBookCard(harry);
+createBookCard(lotr);
+/*
 let add = document.querySelector('p');
 let container = document.querySelector('.container');
 let small = document.querySelector('.small-container');
@@ -54,3 +112,4 @@ function display(myLibrary) {
     })
     
 }
+*/

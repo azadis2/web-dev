@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
     font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
-html,body {
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
     display: flex;
     flex-direction: column;
     background-color: #D11149;
+    font-family: 'Lobster', cursive;
     align-items: center;
-    margin: 0;
-    padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    word-wrap: break-word;
+    margin-bottom: 100px;
 }
 
 header {
@@ -30,30 +37,79 @@ h1 {
     font-size: 50px;
     color: #e3da2f;
 }
-.log-in {
-    margin-right: 50px;
-    color: #e3da2f;
+p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
 }
 
-#add {
+#addBookBtn {
     font-size: 30px;
     color: #e3da2f;
+    height: 60px;
+    width: 200px;
+    margin-left: 525px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+#addBookBtn:hover {
+    filter: brightness(90%);
+    background-color: #bc1141;
+    border-radius: 10px;
+
+}
+.book-card {
+    background-color: #1A8FE3;
+    color: #e3da2f;
+    width: max-content;
+    padding: 25px;
+    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 0px 20px 5px #8888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+#read {
+    background-color: #f86624;
+    border: 2px solid #f86624;
 }
 h4 {
     margin: 0px 0px 5px 0px;
 }
 .container {
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     text-align: center;
+    align-items: center;
+}
+
+#booksGrid {
+    margin: 0 0 0 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: row dense;
+    gap: 40px;
+    margin-top: 40px;
 }
 button {
-    background-color: #F17105;
+    background-color: #dbd5b5;
     border-radius: 10px;
-    border: 1px solid #F17105;
-
-    width: 150px;
+    border: 1px solid #dbd5b5;
+    width: 100px;
 }
 footer{
     width: 100%;
@@ -71,22 +127,4 @@ footer{
 .git{
     height: 25px;
     width: 25px;
-}
-.form-container {
-    background-color: #6610F2;
-    color: #e3da2f;
-    align-items: center;
-    text-align: center;
-    padding: 10px 0px 0px 0px;
-    border-radius: 10%;
-    border: 2px solid #370980;
-    width: 200px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-}
-
-.small-container {
-    display: flex;
-    width: 100vh;
 }
