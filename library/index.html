@@ -17,25 +17,26 @@
     <main class="container">
         <p id="addBookBtn">+ Add Book</p>
         <div class="book-grid" id="booksGrid"></div>
-        <div class="form-container" style="display: none;">
-                <form id="theForm" onsubmit="return false">
-                    <h4>Add a new Book</h4>
-                    <input type="text" placeholder="Title" id="title" required>
-                    <input type="text" placeholder="Author" id="author" required>
-                    <input type="text" placeholder="Pages" id="pages" required>
-                    <br>
-                    <label for="read">Have you read it?</label>
-                    <input type="checkbox" id="read" required>
-                    <br>
-                    <button class="submit">Submit</button>
-                </form>
-        </div>
+        
     </main>
+    <div class="form-container" >
+        <form id="theForm" onsubmit="return false">
+            <h4 style="color: black;">Add a new Book</h4>
+            <input type="text" placeholder="Title" id="title" name="title" required>
+            <input type="text" placeholder="Author" id="author" name="author" required>
+            <input type="text" placeholder="Pages" id="pages" name="pages" required>
+            <p for="read" style="width: 200px; background-color: none;">Have your read it?</p>
+            <br>
+            <input type="checkbox" id="read" value="read" name="read" style="width: 24px; height: 24px; border-radius: 10px; ">
+            <button class="submit" style="background-color: #e01e37; color: black; border: 0;width: 124px; height: 24px;" >Submit</button>
+        </form>
+</div>
     <footer>Copyright &copy
         <a href="https://github.com/azadis2/web-dev/tree/main/library" target="_blank">
             <i class="fab fa-github"></i
         ><img class="git" src="https://www.iconsdb.com/icons/preview/black/github-10-xxl.png" alt="Github logo"></a>
     </footer>
-    <script src="script.js"></script>
+    
 </body>
+<script src="script.js"></script>
 </html>

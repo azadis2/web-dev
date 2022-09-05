@@ -2,6 +2,13 @@
 let myLibrary = [];
 // books grid
 const booksGrid = document.getElementById('booksGrid');
+const buttonRead = document.getElementById('read');
+const removeButton = document.getElementById('remove');
+const form = document.querySelector('.form-container');
+const readCheck = document.querySelector('#read');
+form.style.display = 'none';
+const submitBtn = document.querySelector('.submit');
+
 // book function constructor
 function Book(title, author, pages, read) {
     this.title = title;
@@ -38,17 +45,40 @@ const createBookCard = (book) => {
 
     bookCard.classList.add('book-card');
     btnGroup.classList.add('button-group');
-    readBtn.classList.add('btn');
-    readBtn.id = 'read';
-    removeBtn.classList.add('btn');
-    /*
-    readBtn.onclick = toggleRead; // TODO function
-    removeBtn.onclick = removeBook; // TODO function
-    */
+    readBtn.classList.add('readbtn');
+    if (book.read === true) {
+        readBtn.textContent = 'Read';readBtn.style.backgroundColor = '#02c39a';
+        readBtn.style.border = '2px solid #02c39a';} else {
+        readBtn.textContent = 'Not read';
+        readBtn.style.backgroundColor = '#ea3546';
+            readBtn.style.border = '2px solid #ea3546';
+    } 
+    // toggle read when button is clicked
+    readBtn.addEventListener('click', () => {
+        if (book.read === true) {
+            book.read = false;
+            readBtn.textContent = 'Not read';
+            readBtn.style.backgroundColor = '#ea3546';
+            readBtn.style.border = '2px solid #ea3546';
+        } else {
+            book.read = true;
+            readBtn.textContent = 'Read';
+            readBtn.style.backgroundColor = '#02c39a';
+            readBtn.style.border = '2px solid #02c39a';
+
+        }
+    })
+    removeBtn.classList.add('removebtn');
+    // remove book when button is clicked
+    removeBtn.addEventListener('click', () => {
+        bookCard.innerHTML = '';
+        bookCard.outerHTML = '';
+
+    })
+
    title.textContent = book.title;
    author.textContent = book.author;
    pages.textContent = `${book.pages} pages`;
-   readBtn.textContent = 'Read';
    removeBtn.textContent = 'Remove';
 
    bookCard.appendChild(title);
@@ -59,10 +89,38 @@ const createBookCard = (book) => {
    bookCard.appendChild(btnGroup);
    booksGrid.appendChild(bookCard);
 }
-let harry = new Book('harry potter', 'jk', 364, true);
-let lotr = new Book('LOTR', 'Tolkien', 500, false);
-createBookCard(harry);
-createBookCard(lotr);
+
+const getBookFromInput = () => {
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const pages = document.getElementById('pages').value;
+    let read = document.querySelector('#read').value;
+    if (document.querySelector('#read').checked === true) {
+        read = true;
+    } else {
+        read=false;
+    }
+    return new Book(title, author, pages, read);
+
+}
+const addBook = (e) => {
+    //e.preventDefault();
+    const testBook = getBookFromInput();
+    addBooktoLibrary(testBook);
+    createBookCard(testBook)
+}
+const addBtn = document.getElementById('addBookBtn');
+addBtn.addEventListener('click', () => {
+    form.style.display = 'block';
+})
+submitBtn.addEventListener('click', () => {
+    form.style.display = 'none';
+    addBook();
+})
+
+
+
+
 /*
 let add = document.querySelector('p');
 let container = document.querySelector('.container');
@@ -73,9 +131,7 @@ const submit = document.querySelector('.submit');
 // don't show the form by default
 form.style.display = 'none';
 
-addbtn.addEventListener('click', ()=> {
-    form.style.display = 'block';
-})
+
 
 submit.addEventListener('click', (title, author, pages, read) => {
     let newBook = new Book(title, author, pages, read);
